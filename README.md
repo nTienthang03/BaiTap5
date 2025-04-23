@@ -97,7 +97,7 @@ Tích hợp tiện lợi: Dễ dùng cho in hóa đơn, xuất file, gửi email
   ![image](https://github.com/user-attachments/assets/2645bfc9-bdc1-4ac1-add8-6a2a4d5a95d5)
 
 kết luận 
-Trigger đã giúp tự động hóa việc cập nhật trường TongTien, đảm bảo dữ liệu luôn chính xác và nhất quán. Điều này giảm thiểu sai sót và tiết kiệm thời gian khi truy xuất thông tin hóa đơn, góp phần nâng cao hiệu suất của hệ thống quản lý quán cà phê.
+Việc thêm trường phi chuẩn TongTien vào bảng HoaDon mang lại hiệu quả cao trong xử lý và truy xuất dữ liệu, đặc biệt là trong các hệ thống quản lý bán hàng có tần suất truy vấn lớn. Dù làm tăng một chút độ phức tạp trong cập nhật dữ liệu, nhưng với việc sử dụng trigger, hệ thống vẫn đảm bảo tính nhất quán, đồng thời nâng cao hiệu suất, giảm tải cho cơ sở dữ liệu và hỗ trợ tốt cho việc báo cáo, thống kê. Đây là một giải pháp phi chuẩn hóa có kiểm soát và hợp lý trong thực tế.
 
 
  

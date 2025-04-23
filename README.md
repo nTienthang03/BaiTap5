@@ -68,8 +68,16 @@ bảng NhanVien liên kết với Hoadon bằng MaNv
 # NỘI DUNG B
 
 Bổ xung thêm 1 vài trường Phi chuẩn 
+
 Thêm trường Phi chuẩn TongTien cho bang HoaDon 
+
 ![image](https://github.com/user-attachments/assets/286752d9-d366-4a02-8c6d-acf7bbc26a81)
+
+ Nạp code vào SQL 
+ 
+ ![Screenshot (104)](https://github.com/user-attachments/assets/f39b2e84-70da-4823-9724-d4035ea273c9)
+
+
  Lợi ích khi thêm :
 Truy vấn nhanh: Lấy tổng tiền trực tiếp, không cần tính toán lại mỗi lần.
 

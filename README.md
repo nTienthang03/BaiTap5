@@ -28,56 +28,68 @@ SUBJECT: Trigger on mssql
   # BÀI LÀM
   # NỘI DUNG A
 DATABASE VÀ CÁC BẢNG.
- ChiTietDonHang( số hóa đơn khóa chính )
- ![image](https://github.com/user-attachments/assets/19068781-a070-42be-80e8-4c12d4a85c00)
 
-DONDATHANG ( Pk là soHoaDon)
+ChiTietHoaDon ( pk
+![image](https://github.com/user-attachments/assets/e8d876a7-f431-45b1-b243-115cf7a2a276)
 
-![image](https://github.com/user-attachments/assets/83c43a22-c7b5-4d8f-89b3-8a977e426981)
+HoaDon ( pk là MaHD)
 
-KHACHHANG ( pk là maKhachhang)
-![image](https://github.com/user-attachments/assets/e4614511-fa14-4a29-ab3f-a305f65790fe)
+![image](https://github.com/user-attachments/assets/7f8da71d-79d6-44b0-b834-c093f19259bb)
 
+KhachHang ( pk la MaKH)
+![image](https://github.com/user-attachments/assets/99d38998-9c16-4be6-b297-e5f482ea35fa)
 
+MonUong( pk là MaMon)
+![image](https://github.com/user-attachments/assets/e4da9fa1-86ba-4f5d-a4f8-38792d6ecb42)
 
-LOAIHANG (pk maLoaihang)
+NhanVien( pk MaNV)
+![image](https://github.com/user-attachments/assets/e3868722-8885-4154-ac8c-8d949f928bd6)
 
-![image](https://github.com/user-attachments/assets/c1767d0d-c59a-47e9-9ed9-2179a4a38b86)
+2 Khóa ngoại FK và CK
 
-MATHANG( pk mahang)
-![image](https://github.com/user-attachments/assets/5b52f467-1b28-4fce-9e58-640e7da4c07e)
+Liên kết Chitiethoadon với MaMon và MaHoaDon
+![image](https://github.com/user-attachments/assets/d7f7ba4b-812b-4cfc-9f26-d722c19dd06a)
 
-NHACUNGCAP (pk maNhaCC)
-![image](https://github.com/user-attachments/assets/731cf3bc-fa9d-4e3c-9526-f6be486a333b)
+Bảng MonUong liên kết với ChitietHoaHon bằng MaMon
+![image](https://github.com/user-attachments/assets/1066dd69-97ab-4bc0-a02f-8e88ffb43928)
 
-NHANVIEN( PK maNhanVien)
-![image](https://github.com/user-attachments/assets/e961f5a8-d9ab-4c1b-8a02-584afe725017)
+Bảng HoaDon liên kết với ChitietHoaDon bằng MaHD
+![image](https://github.com/user-attachments/assets/9d613f72-f8fd-437c-b44c-afd3a42e042d)
 
-SUKIEN ( Pk maSukien)
-![image](https://github.com/user-attachments/assets/eeefc732-1cf0-4448-8682-177991193c4a)
+Bảng KhachHang liên kết với HoaDon bằng MaKH 
+![image](https://github.com/user-attachments/assets/8ea87fdc-b650-4402-afdc-2ea1c961bdeb)
 
-THANHTOAN ( PK maHinhThucThanhToan)
-![image](https://github.com/user-attachments/assets/972c1b51-a875-4007-b27a-32a15a980279)
+bảng NhanVien liên kết với Hoadon bằng MaNv
+![image](https://github.com/user-attachments/assets/fed0bb0f-bc0c-4d58-824f-264494e98459)
 
-2 Khóa ngoại (FK và Ck )
-Liên kết bảng DONDATHANG VA CHITIETHOADON = SoHoaDon
-![image](https://github.com/user-attachments/assets/6cda8c6f-32c8-414d-8961-6d5aa3e1d1c1)
-
-liên kết MAHANG VÀ CHITIETDONHANG = maHang
-![image](https://github.com/user-attachments/assets/051ccfb5-ae2b-4add-bc4c-cbada30bbbf0)
-
-Liên kết KHACHHANG VA  DONDATHANG =maKhachHang
-![image](https://github.com/user-attachments/assets/64c248a4-a684-45eb-9abf-8e5c2e0337d1)
-
-Lien Kết  LOAiHANG VA  MATHANG= maLoaiHang 
-![image](https://github.com/user-attachments/assets/19c5239a-a95e-4d49-9d0b-2168c376901f)
-
-Liên kết THANHTOAN VA DONDATHANG =mahinhThucThanhToan
-![image](https://github.com/user-attachments/assets/7d59046e-379d-4f9f-b21e-715d1040f7d0)
 
 
 
 # NỘI DUNG B
+
+Bổ xung thêm 1 vài trường Phi chuẩn 
+Thêm trường Phi chuẩn TongTien cho bang HoaDon 
+![image](https://github.com/user-attachments/assets/286752d9-d366-4a02-8c6d-acf7bbc26a81)
+ Lợi ích khi thêm :
+Truy vấn nhanh: Lấy tổng tiền trực tiếp, không cần tính toán lại mỗi lần.
+
+Hỗ trợ báo cáo: Dễ dàng thống kê, lọc và xuất dữ liệu.
+
+Giảm tải hệ thống: Hạn chế tính toán nặng khi nhiều người truy cập.
+
+Tích hợp tiện lợi: Dễ dùng cho in hóa đơn, xuất file, gửi email...
+
+Đảm bảo nhất quán: Trigger tự động cập nhật, tránh sai sót khi sửa dữ liệu.
+
+
+  Dữ liệu ban đầu 
+ ![image](https://github.com/user-attachments/assets/a1e4c32e-c0ee-46cc-96f8-4418de366340)
+  sau khi nhập dữ liệu mới
+
+  ![image](https://github.com/user-attachments/assets/2645bfc9-bdc1-4ac1-add8-6a2a4d5a95d5)
+
+kết luận 
+Trigger đã giúp tự động hóa việc cập nhật trường TongTien, đảm bảo dữ liệu luôn chính xác và nhất quán. Điều này giảm thiểu sai sót và tiết kiệm thời gian khi truy xuất thông tin hóa đơn, góp phần nâng cao hiệu suất của hệ thống quản lý quán cà phê.
 
 
  
